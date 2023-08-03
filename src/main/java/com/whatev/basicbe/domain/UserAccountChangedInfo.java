@@ -11,9 +11,14 @@ import java.util.Objects;
 
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Table(indexes = {
+        @Index(columnList = "email", unique = true),
+        @Index(columnList = "created_at"),
+        @Index(columnList = "created_by")
+})
 @Getter
 @Entity
-public class UserAccountChangedInfo {
+public class UserAccountChangedInfo extends AuditingFields{
 
     @Id
     @Column(nullable = false, name = "no")
