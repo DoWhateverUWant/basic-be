@@ -2,13 +2,11 @@ package com.whatev.basicbe.domain;
 
 import com.whatev.basicbe.domain.constant.converter.GenderTypeConverter;
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.Objects;
 
+@ToString(callSuper = true)
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(indexes = {
