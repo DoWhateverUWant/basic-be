@@ -21,7 +21,7 @@ public enum Gender {
         return Arrays.stream(Gender.values())
                 .filter(v -> v.getValue().equals(value))
                 .findAny()
-                .orElseThrow(() -> new NoSuchParameterException(String.format("해당하는 %s이 존재하지 않습니다.", value)));
+                .orElseThrow(() -> new NoSuchParameterException(String.format("해당하는 성별\\(%s\\)이 존재하지 않습니다.", value)));
     }
 
 }
