@@ -1,0 +1,3 @@
+[submodule "src/main/resources/basic-be-security"]
+	path = src/main/resources/basic-be-security
+	url = https://github.com/DoWhateverUWant/basic-be-security.git
