@@ -1,6 +1,6 @@
-package com.whatev.basicbe.domain.constant.converter;
+package com.whatev.basicbe.app.v1.domain.constant.converter;
 
-import com.whatev.basicbe.domain.constant.Gender;
+import com.whatev.basicbe.app.v1.domain.constant.Gender;
 import io.micrometer.common.util.StringUtils;
 import jakarta.persistence.AttributeConverter;
 

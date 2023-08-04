@@ -1,4 +1,4 @@
-package com.whatev.basicbe.domain.constant;
+package com.whatev.basicbe.app.v1.domain.constant;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
