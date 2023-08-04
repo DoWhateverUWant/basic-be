@@ -1,6 +1,6 @@
-package com.whatev.basicbe.domain;
+package com.whatev.basicbe.app.v1.domain;
 
-import com.whatev.basicbe.domain.constant.converter.GenderTypeConverter;
+import com.whatev.basicbe.app.v1.domain.constant.converter.GenderTypeConverter;
 import jakarta.persistence.*;
 import lombok.*;
 
