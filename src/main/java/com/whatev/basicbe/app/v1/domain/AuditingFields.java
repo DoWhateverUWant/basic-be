@@ -1,4 +1,4 @@
-package com.whatev.basicbe.domain;
+package com.whatev.basicbe.app.v1.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
