@@ -1,6 +1,6 @@
-package com.whatev.basicbe.domain;
+package com.whatev.basicbe.app.v1.domain;
 
-import com.whatev.basicbe.domain.constant.converter.GenderTypeConverter;
+import com.whatev.basicbe.app.v1.domain.constant.converter.GenderTypeConverter;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -45,6 +45,10 @@ public class UserAccountChangedInfo extends AuditingFields{
     @Convert(converter = GenderTypeConverter.class)
     @Column(nullable = false, length = 10, name = "gender")
     private String gender;
+
+    public static UserAccountChangedInfo of(UserAccount userAccount, String email, String nickname, String name, String rrn11, String rrn12, String gender) {
+        return new UserAccountChangedInfo(null, userAccount, email, nickname, name, rrn11, rrn12, gender);
+    }
 
     @Override
     public boolean equals(Object o) {
