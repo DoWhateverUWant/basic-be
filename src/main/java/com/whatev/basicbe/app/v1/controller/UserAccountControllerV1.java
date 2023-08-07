@@ -11,9 +11,8 @@ import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.HttpSessionRequiredException;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @RequiredArgsConstructor
@@ -60,5 +59,17 @@ public class UserAccountControllerV1 {
         }
 
         return "redirect:/api/v1";
+    }
+
+    // 내 정보 조회
+    @GetMapping(path = "/my-info")
+    public ResponseEntity<LoginResponseV1> myInfo(
+            @SessionAttribute(name = SessionConst.LOGIN_USER, required = false) LoginResponseV1 loginResponseV1) throws HttpSessionRequiredException {
+
+        if(loginResponseV1 == null) {
+            throw new HttpSessionRequiredException("로그인 정보가 없습니다.");
+        }
+
+        return ResponseEntity.ok().body(loginResponseV1);
     }
 }
