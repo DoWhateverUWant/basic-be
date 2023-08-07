@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
-public class LoginResponse {
+public class LoginResponseV1 {
 
     private String userId;
 
@@ -21,12 +21,12 @@ public class LoginResponse {
 
     private String gender;
 
-    public static LoginResponse of(String userId, String email, String nickname, String name, String gender) {
-        return new LoginResponse(userId, email, nickname, name, gender);
+    public static LoginResponseV1 of(String userId, String email, String nickname, String name, String gender) {
+        return new LoginResponseV1(userId, email, nickname, name, gender);
     }
 
-    public static LoginResponse from(UserAccount entity) {
-        return new LoginResponse(
+    public static LoginResponseV1 from(UserAccount entity) {
+        return new LoginResponseV1(
                 entity.getUserId(),
                 entity.getEmail(),
                 entity.getNickname(),

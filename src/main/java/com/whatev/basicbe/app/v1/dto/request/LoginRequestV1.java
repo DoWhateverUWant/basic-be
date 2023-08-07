@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
-public class LoginRequest {
+public class LoginRequestV1 {
 
     @NotNull(message = "아이디를 입력하세요")
     private String userId;

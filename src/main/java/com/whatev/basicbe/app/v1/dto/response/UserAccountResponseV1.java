@@ -1,4 +1,4 @@
-package com.whatev.basicbe.app.v1.dto;
+package com.whatev.basicbe.app.v1.dto.response;
 
 import com.whatev.basicbe.app.v1.domain.UserAccount;
 import com.whatev.basicbe.app.v1.domain.UserAccountChangedInfo;
@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
-public class UserAccountDtoV1 {
+public class UserAccountResponseV1 {
 
     @NotNull(message = "ID를 작성해 주세요.")
     private String userId;
@@ -38,16 +38,18 @@ public class UserAccountDtoV1 {
     private String name;
 
     @NotNull(message = "주민번호 앞자리를 작성해 주세요.")
+    @Size(min = 6, max = 6, message = "주민등록번호 형식이 올바르지 않습니다.")
     private String rrn11;
 
     @NotNull(message = "주민번호 뒷자리를 작성해 주세요.")
+    @Size(min = 7, max = 7, message = "주민등록번호 형식이 올바르지 않습니다.")
     private String rrn12;
 
     @NotNull(message = "성별을 선택해 주세요.")
     private String gender;
 
-    public static UserAccountDtoV1 from(UserAccount entity) {
-        return new UserAccountDtoV1(
+    public static UserAccountResponseV1 from(UserAccount entity) {
+        return new UserAccountResponseV1(
                 entity.getUserId(),
                 entity.getUserPassword(),
                 entity.getUserPassword(),
