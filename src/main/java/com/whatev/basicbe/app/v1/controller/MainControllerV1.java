@@ -18,7 +18,7 @@ public class MainControllerV1 {
     public ResponseEntity<LoginResponseV1> homeLogin(
             @SessionAttribute(name = SessionConst.LOGIN_USER, required = false) LoginResponseV1 loginResponseV1) throws HttpSessionRequiredException {
         if(loginResponseV1 == null) {
-            throw new HttpSessionRequiredException("세션의 값이 일치하지 않습니다.");
+            throw new HttpSessionRequiredException("로그인 정보가 없습니다.");
         }
 
         return ResponseEntity.ok(loginResponseV1);
