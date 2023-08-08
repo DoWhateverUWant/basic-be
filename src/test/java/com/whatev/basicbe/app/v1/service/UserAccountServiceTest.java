@@ -1,7 +1,6 @@
 package com.whatev.basicbe.app.v1.service;
 
 import com.whatev.basicbe.app.v1.domain.UserAccount;
-import com.whatev.basicbe.app.v1.domain.constant.Gender;
 import com.whatev.basicbe.app.v1.dto.request.UserAccountRequestV1;
 import com.whatev.basicbe.app.v1.dto.response.UserAccountResponseV1;
 import com.whatev.basicbe.app.v1.repository.UserAccountRepositoryV1;
@@ -93,7 +92,7 @@ public class UserAccountServiceTest {
                 "김테스트",
                 "000101",
                 "3011111",
-                Gender.MALE.getValue()
+                "FEMALE"
         );
     }
 }

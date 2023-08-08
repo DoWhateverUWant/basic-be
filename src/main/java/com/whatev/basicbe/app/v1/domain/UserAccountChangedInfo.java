@@ -1,6 +1,5 @@
 package com.whatev.basicbe.app.v1.domain;
 
-import com.whatev.basicbe.app.v1.domain.constant.converter.GenderTypeConverter;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -10,13 +9,11 @@ import java.util.Objects;
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(indexes = {
-        @Index(columnList = "email", unique = true),
-        @Index(columnList = "created_at"),
-        @Index(columnList = "created_by")
+        @Index(columnList = "email", unique = true)
 })
 @Getter
 @Entity
-public class UserAccountChangedInfo extends AuditingFields{
+public class UserAccountChangedInfo {
 
     @Id
     @Column(nullable = false, name = "no")
@@ -42,7 +39,6 @@ public class UserAccountChangedInfo extends AuditingFields{
     @Column(nullable = false, length = 50, name = "rrn12")
     private String rrn12;
 
-    @Convert(converter = GenderTypeConverter.class)
     @Column(nullable = false, length = 10, name = "gender")
     private String gender;
 

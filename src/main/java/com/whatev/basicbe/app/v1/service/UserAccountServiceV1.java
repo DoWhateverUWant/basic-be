@@ -9,10 +9,12 @@ import com.whatev.basicbe.app.v1.repository.UserAccountChangedInfoRepositoryV1;
 import com.whatev.basicbe.app.v1.repository.UserAccountRepositoryV1;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
+@Service
 @RequiredArgsConstructor
 public class UserAccountServiceV1 {
 

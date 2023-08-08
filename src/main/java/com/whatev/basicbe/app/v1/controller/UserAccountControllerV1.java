@@ -10,11 +10,13 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.HttpSessionRequiredException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+@Controller
 @RequiredArgsConstructor
 @RequestMapping("/api/v1")
 public class UserAccountControllerV1 {
@@ -22,7 +24,7 @@ public class UserAccountControllerV1 {
     private final UserAccountServiceV1 userAccountServiceV1;
 
     // 회원 가입
-    @PostMapping(path= "/signup")
+    @PostMapping(path = "/signup")
     public ResponseEntity<UserAccountResponseV1> signup(@RequestBody UserAccountRequestV1 userAccountRequestV1) {
         UserAccountResponseV1 user = userAccountServiceV1.saveUser(userAccountRequestV1);
 

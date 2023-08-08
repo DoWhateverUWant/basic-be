@@ -14,10 +14,10 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
-@ToString
-@Getter
-@EntityListeners(AuditingEntityListener.class)
-@MappedSuperclass
+//@ToString
+//@Getter
+//@EntityListeners(AuditingEntityListener.class)
+//@MappedSuperclass
 public abstract class AuditingFields {
 
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
