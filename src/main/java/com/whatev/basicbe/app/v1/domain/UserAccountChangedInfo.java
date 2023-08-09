@@ -8,9 +8,6 @@ import java.util.Objects;
 @ToString(callSuper = true)
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Table(indexes = {
-        @Index(columnList = "email", unique = true)
-})
 @Getter
 @Entity
 public class UserAccountChangedInfo {

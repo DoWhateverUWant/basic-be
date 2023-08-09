@@ -9,9 +9,6 @@ import java.util.Objects;
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @ToString
 @Getter
-@Table(indexes = {
-        @Index(columnList = "email", unique = true)
-})
 @Entity
 public class UserAccount {
 
