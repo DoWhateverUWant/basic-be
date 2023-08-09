@@ -21,6 +21,9 @@ public class UserAccountResponseV1 {
 
     private String gender;
 
+    public static UserAccountResponseV1 of(String userId, String email, String nickname, String name, String gender) {
+        return new UserAccountResponseV1(userId, email, nickname, name, gender);
+    }
     public static UserAccountResponseV1 from(UserAccount entity) {
         return new UserAccountResponseV1(
                 entity.getUserId(),
