@@ -42,3 +42,4 @@
 |로그인|POST| /api/v1/login   |    X     |
 |로그아웃|POST| /api/v1/logout  |    O     |
 |내정보 조회|GET| /api/v1/my-info |    O     |
+|내정보 변경|PUT|/api/v1/my-info|O|
