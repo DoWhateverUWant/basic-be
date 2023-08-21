@@ -19,6 +19,7 @@ public class UserAccountChangedInfo {
 
     @ManyToOne(targetEntity = UserAccount.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "userId")
+    @ToString.Exclude
     private UserAccount userAccount;
 
     @Column(nullable = false, length = 100, name = "email")
